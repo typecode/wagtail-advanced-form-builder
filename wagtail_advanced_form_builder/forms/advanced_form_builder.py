@@ -60,18 +60,6 @@ class AdvancedFormBuilder(FormBuilder):
 
         return forms.ChoiceField(**options)
 
-    def create_alternative_email_dropdown_field(self, field, options):
-        options["choices"] = list(
-            map(
-                lambda x: (x.get("value", "").strip(), x.get("value", "").strip()),
-                field.choices,
-            )
-        )
-        if field.empty_label:
-            options["choices"] = [("", field.empty_label)] + options["choices"]
-
-        return forms.ChoiceField(**options)
-
     def create_checkboxes_field(self, field, options):
         options["choices"] = list(
             map(
