@@ -20,6 +20,9 @@
     {% include "wagtail_advanced_form_builder/fields/text_area_field.html" with field=field %}
 {% elif field|fieldtype == 'FieldToggleInput' %}
     {% include "wagtail_advanced_form_builder/fields/field_toggle.html" with field=field %}
+{% elif field|fieldtype == 'RichTextCheckboxInput' %}
+    {# NB: 'RichTextCheckboxInput' is defined in the EL code because it needs access to the simple rich text block #}
+    {% include "wagtail_advanced_form_builder/fields/richtext_checkbox_field.html" with field=field %}
 {% else %}
     {% include "wagtail_advanced_form_builder/fields/default_field.html" with field=field %}
 {% endif %}
