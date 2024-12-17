@@ -11,8 +11,6 @@ class CheckboxInput(DjangoCheckboxInput):
 
         context = super().get_context(*args, **kwargs)
 
-        print("context", context)
-
         context['widget'].update({
             'display_checkbox_label': self.display_checkbox_label,
         })
