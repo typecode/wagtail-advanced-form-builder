@@ -13,7 +13,7 @@ class CheckboxFieldBlock(BaseFieldBlock):
 
     html = None
 
-    default_value = None
+    # default_value = None
 
     display_side_by_side = None
 

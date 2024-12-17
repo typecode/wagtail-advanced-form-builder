@@ -87,7 +87,8 @@ class AdvancedFormBuilder(FormBuilder):
 
     def create_checkbox_field(self, field, options):
         options["widget"] = CheckboxInput(
-            display_checkbox_label=field.display_checkbox_label
+            display_checkbox_label=field.display_checkbox_label,
+            default_value = field.default_value
         )
         return forms.BooleanField(**options)
 
