@@ -15,5 +15,5 @@ class SingleLineFieldBlock(BaseFieldBlock):
 
     class Meta:
 
-        form_classname = 'waf--field'
+        form_classname = 'waf--field form-control'
         icon = 'extraicons--basic-field'
