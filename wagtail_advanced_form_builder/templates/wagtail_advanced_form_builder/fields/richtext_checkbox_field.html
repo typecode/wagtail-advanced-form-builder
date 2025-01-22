@@ -1,4 +1,5 @@
 {# NB: 'RichTextCheckboxInput' is defined in the EL code because it needs access to the simple rich text block #}
+{% load wagtailcore_tags %}
 <div
         class="waf--field-container {% if field.errors %}waf--field-container--error{% endif %}"
         data-waf-field
@@ -6,7 +7,7 @@
     <div class="waf--checkbox-container">
         {{ field }}
         <label class="waf--field-label-choice" for="{{ field.id_for_label }}">
-            {{ field.field.widget.attrs.display_text|safe }}
+            {{ field.field.widget.attrs.display_text|richtext }}
         </label>
     </div>
     {% if field.help_text %}
